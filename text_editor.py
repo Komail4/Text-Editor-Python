@@ -8,6 +8,8 @@ class HomePage(tkinter.Frame):
         self.controller  = controller
         self.label_welcome = ttk.Label(self, text="Welcome to Komail's Text Editor", font=("Arial", 24))
         self.label_welcome.pack(pady=100)
+        self.button_back = ttk.Button(self, text= "Text edit page", command =lambda: self.controller.show_frame("TextEditPage"))
+        self.button_back.pack()
 
 class TextEditPage(tkinter.Frame):
     def __init__(self, parent, controller):
